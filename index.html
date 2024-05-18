@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Форма</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="jquery.maskedinput.min.js"></script>
+</head>
+<form>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <hr>
+        <label>Имя</label>
+        <input type="text" placeholder="Введите имя"  required minlength="3" pattern="[А-ЯЁ]{1}[а-яё]+([-][А-ЯЁ]{1}[а-яё]+)*$">
+        <label>E-Mail</label>
+        <input type="email" placeholder="name@name.xx" required title="Шаблон name@name.xx" pattern="[A-Za-z\d]+@[A-Za-z\d]+\.[a-z]{2}">
+        <label>Номер</label>
+        <input type="text" placeholder="Там были номера" required title="Там были номера" pattern="([+]7|8)[(]\d{3}[)]\d{3}\s\d{2}\s\d{2}">
+        <label>Пароль</label>
+        <input type="password" placeholder="Тут пароль" required minlength="8" id="pass" title="Тут тоже" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[_]).*">
+        <button type="submit">Зарегистрироваться</button>
+    </div>
+</form>
+</html>
